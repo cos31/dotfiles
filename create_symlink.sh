@@ -9,7 +9,8 @@ for dotfile in .?*; do
         .git)
             continue;;
         *)
-            ln -Fis "$PWD/$dotfile" $HOME
+            echo symlink ... "$PWD/$dotfile" $HOME;
+            ln -Fs "$PWD/$dotfile" $HOME
             ;;
     esac
 done
