@@ -1,0 +1,11 @@
+.DS_Store
+Icon
+
+# emacs
+*~
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
