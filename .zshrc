@@ -18,7 +18,7 @@ colors
 ## vcs setting
 # http://d.hatena.ne.jp/mollifier/20090814/p1
 # http://d.hatena.ne.jp/sugyan/20091021/1256059079
-autoload -Uz vcs_info
+autoload -U vcs_info
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*' formats '%{'${fg[red]}'%}[%s %b] %{'$reset_color'%}'
 
@@ -43,13 +43,13 @@ esac
 # http://blog.soi33.org/archives/96
 #
 case ${UID} in
-0)
-    PROMPT="%{^[[31m%}%/%%%{^[[m%}%b "
-    PROMPT2="%{^[[31m%}%_%%%{^[[m%} "
-    SPROMPT="%{^[[31m%}%r is correct? [n,y,a,e]:%{^[[m%} "
-    [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-        PROMPT="%{^[[37m%}${HOST%%.*} ${PROMPT}"
-    ;;
+#0)
+#    PROMPT="%{^[[31m%}%/%%%{^[[m%}%b "
+#    PROMPT2="%{^[[31m%}%_%%%{^[[m%} "
+#    SPROMPT="%{^[[31m%}%r is correct? [n,y,a,e]:%{^[[m%} "
+#    [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+#        PROMPT="%{^[[37m%}${HOST%%.*} ${PROMPT}"
+#    ;;
 *)
     PROMPT="%{[32m%}%m%{[m%}:%{[34m%}%B%~%b%}%{[m%} %% "
     PPROMPT='%{[30m%}${vcs_info_msg_0_}%{[m%}'
@@ -205,5 +205,8 @@ setopt hist_verify
 
 # coreのサイズ
 limit coredumpsize 0
+
+# 3秒以上かかった処理は詳細表示
+REPORTTIME=3
 
 ### end of file
