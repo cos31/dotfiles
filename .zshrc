@@ -99,7 +99,7 @@ alias cp="cp -i"
 alias mv="mv -i"
 
 alias eo="open -a 'emacs'"
-
+alias tree='tree -CN'
 alias svn=colorsvn
 alias diff=colordiff
 alias grep='grep --color=auto'
