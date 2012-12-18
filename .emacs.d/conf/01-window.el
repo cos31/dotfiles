@@ -3,5 +3,6 @@
  '(menu-bar-mode nil))
 
 ;; color
-(set-background-color "black")
 (set-foreground-color "white")
+(set-background-color "black")
+(set-cursor-color "light blue")

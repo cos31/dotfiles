@@ -6,8 +6,17 @@
  '(ns-command-modifier   'meta))
 
 ;; exchange C-j <-> C-m
-(keyboard-translate ?\C-j ?\C-m)
-(keyboard-translate ?\C-m ?\C-j)
+;; (keyboard-translate ?\C-j ?\C-m)
+;; (keyboard-translate ?\C-m ?\C-j)
+
+;; full screen setting
+(defun my-mac-toggle-max-window ()
+  (interactive)
+  (if (frame-parameter nil 'fullscreen)
+      (set-frame-parameter nil 'fullscreen nil)
+    (set-frame-parameter nil 'fullscreen 'fullboth)))
+(global-set-key "\C-cm" 'my-mac-toggle-max-window)
+
 
 ;; global-set-key
 (define-key global-map (kbd "C-h") 'delete-backward-char)
