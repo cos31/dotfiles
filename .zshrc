@@ -11,13 +11,10 @@ function history-all { history -E 1 } # 全履歴の一覧を出力する
 
 ### prompt
 
-# プロンプトのカラー表示を有効
-autoload -U colors
-colors
-
 ## vcs setting
 # http://d.hatena.ne.jp/mollifier/20100906/p1
 autoload -Uz add-zsh-hook
+# プロンプトのカラー表示を有効
 autoload -Uz colors
 colors
 autoload -Uz vcs_info
@@ -98,12 +95,11 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
-alias eo="open -a 'emacs'"
+alias oe="open -a 'emacs'"
 alias tree='tree -CN'
 alias svn=colorsvn
 alias diff=colordiff
 alias grep='grep --color=auto'
-
 
 ##################################################
 ### others
@@ -228,4 +224,7 @@ limit coredumpsize 0
 # 3秒以上かかった処理は詳細表示
 REPORTTIME=3
 
+# toriaezu
+source ~/perl5/perlbrew/etc/bashrc
+PATH=$PATH:$HOME/bin
 ### end of file

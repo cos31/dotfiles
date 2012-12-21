@@ -11,3 +11,4 @@ export H=$HOME
 # fpath
 typeset -U fpath
 fpath=($fpath $HOME/.zsh/functions(N))
+export PATH=/usr/local/libexec:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
