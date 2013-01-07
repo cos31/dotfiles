@@ -3,6 +3,18 @@
  '(menu-bar-mode nil))
 
 ;; color
+;;   temp
 (set-foreground-color "white")
 (set-background-color "black")
-(set-cursor-color "light blue")
+(custom-set-faces
+ '(default ((t
+             (:background "black" :foreground "#FFFFFF")
+             )))
+ '(cursor ((((class color)
+             (background dark))
+            (:background "light blue"))
+           (((class color)
+             (background light))
+            (:background "#999999"))
+           (t ())
+           )))
