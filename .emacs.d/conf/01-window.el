@@ -18,3 +18,8 @@
             (:background "#999999"))
            (t ())
            )))
+
+;; @ color-theme
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-arjen)

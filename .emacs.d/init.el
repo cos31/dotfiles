@@ -2,10 +2,10 @@
 ;; http://www.emacswiki.org/emacs/auto-install.el
 (add-to-list 'load-path "~/.emacs.d/auto-install")
 (require 'auto-install)
-(auto-install-update-emacswiki-package-name t)
+;; (auto-install-update-emacswiki-package-name t)
 ;; (auto-install-from-emacswiki "auto-install.el")
 (setq auto-install-directory "~/.emacs.d/auto-install/")
-(auto-install-compatibility-setup)
+;; (auto-install-compatibility-setup)
 
 ;; package.el
 (require 'package)

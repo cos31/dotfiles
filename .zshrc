@@ -60,18 +60,18 @@ esac
 #
 case ${UID} in
 0)
-    PROMPT="%{^[[31m%}%/%%%{^[[m%}%b "
-    PROMPT2="%{^[[31m%}%_%%%{^[[m%} "
-    SPROMPT="%{^[[31m%}%r is correct? [n,y,a,e]:%{^[[m%} "
+    PROMPT="%{[31m%}%m%{[m%}:%{[34m%}%B%~%b%}%{[m%} %% "
+    PROMPT2="%{[30m%}${vcs_info_msg_0_}%_%%%{[m%} "
+    SPROMPT="%{[31m%}%r is correct? [n,y,a,e]:%{[m%} "
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-        PROMPT="%{^[[37m%}${HOST%%.*} ${PROMPT}"
+        PROMPT="%{[37m%}${HOST%%.*} ${PROMPT}"
     ;;
 *)
     PROMPT="%{[32m%}%m%{[m%}:%{[34m%}%B%~%b%}%{[m%} %% "
     PPROMPT='%{[30m%}${vcs_info_msg_0_}%{[m%}'
-    SPROMPT="%B%{^[[31m%}%r is correct? [n,y,a,e]:%{^[[m%}%b "
+    SPROMPT="%B%{[31m%}%r is correct? [n,y,a,e]:%{[m%}%b "
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-         PROMPT="%{^[[37m%}${HOST%%.*} ${PROMPT}"
+         PROMPT="%{[31m%}∞ ${PROMPT}"
     ;;
 esac
 

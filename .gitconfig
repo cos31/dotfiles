@@ -1,6 +1,6 @@
 [user]
-    name = cos31
-    email = cos31@ymail.com
+	name = cos31
+	email = cos31@ymail.com
 [color]
     ui = auto
 [alias]
@@ -10,5 +10,13 @@
     tr = log --graph --pretty='format:%C(yellow)%h%Creset %C(magenta)%cd%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset' --date=iso
 [core]
     pager = "LESS=-R less"
-    excludesfile = ~/.gitignore
-
+	excludesfile = /Users/kitakami.yuichi/.gitignore
+    editor = emacs
+[push]
+    default = upstream
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
